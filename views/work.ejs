@@ -1,0 +1,32 @@
+<%- include("partials/header.ejs") %>
+
+<div class="task-container">
+    <div class="content-container">
+        <div class="heading">
+            <% if (locals.workTitle) { %>  
+             <%= workTitle %> 
+            <% } %>
+        </div>
+
+        <% if (locals.workTitle) { %>
+            <form class="inputForm" action="/work" method="post">
+                <input type="text" name="newItem" placeholder="New Item" autocomplete="off" required="">
+                <button type="submit" name="list" value="">+</button>
+            </form>
+            <div class="box"> 
+            <% for (workTask of workTaskList) {%>   
+                <div class="item">
+                    <input type="checkbox" class="crossCheckboxWork">
+                    <p>
+                        <%= workTask %>
+                    </p>
+                </div>
+            <% } %>
+            </div>
+        <% } %>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/work.js"></script>
+<%- include("partials/footer.ejs") %>

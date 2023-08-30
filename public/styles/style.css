@@ -1,0 +1,180 @@
+.crossed{
+    text-decoration: line-through;
+}
+
+.sm-view{
+    display: none;
+}
+
+header{
+    background-color: #AA77FF;
+}
+
+header .row {
+    height: 5rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+header a {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.title{
+    margin-left: 1rem;
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+
+.task-container{
+    background-color: #5BC0F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 81vh;
+}
+
+.content-container{
+    font-family: 'Merriweather Sans', sans-serif;
+    height: 85%;
+    width: 30%;
+    background-color: #CAEDFF;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.heading{
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    background-color: #AA77FF;
+    border-radius: 20px 20px 0 0;
+    color: white;
+    font-size: 1.3rem;
+    padding: 1rem;
+
+}
+
+.inputForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.inputForm input{
+    width: 85%;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 10px;
+    color: #AA77FF;
+}
+
+.inputForm button{
+    width: 3rem;
+    min-height: 3rem;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    background-color: #AA77FF;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.box {
+    overflow: auto;
+    height: 63%;
+}
+
+.item{
+    border-top: 1px solid #D0BFFF;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.box input{
+    margin: 1.5rem;
+}
+
+.box p {
+    color: #AA77FF;
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+}
+
+footer{
+    font-family: 'Merriweather Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6F61C0;
+    height: 15vh;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    width: 15rem;
+    flex-wrap: wrap;
+}
+.footer-container p{
+    font-size: 0.8rem;
+    color: white;
+}
+
+.fa-custome{
+    margin-top: 1rem;
+    padding: 0 0.2rem;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 900px){
+    .lg-view{
+        display: none;
+    }
+
+    .sm-view{
+        display: block;
+    }
+
+    .custom-navbar{
+        background-color: #AA77FF !important;
+    }
+
+    .nav-item-white{
+        color: white !important;
+    }
+
+    .task-container{
+        height: 86vh;
+    }
+
+    .content-container{
+        width: 65%;
+    }
+
+    .inputForm input{
+        margin-bottom: 0.8rem;
+    }
+    .inputForm button{
+        margin-bottom: 0.5rem;
+    }
+
+    footer{
+        height: 15vh;
+    }
+}
+
+@media (max-width: 500px){
+    .content-container{
+        width: 85%;
+    }
+}

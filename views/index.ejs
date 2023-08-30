@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+<div class="task-container">
+    <div class="content-container">
+        <div class="heading">
+            <% if (locals.date) { %>
+               <%= date %> 
+            <% } %>
+        </div>
+
+
+        <%  if (locals.date) { %>
+            <form class="inputForm" action="/" method="post">
+                <input type="text" name="newItem" placeholder="New Item" autocomplete="off" required="">
+                <button type="submit" name="list" value="">+</button>
+            </form>
+            <div class="box"> 
+            <% for (task of dailyTaskList) {%>   
+                <div class="item">
+                    <input type="checkbox" class="crossCheckbox">
+                    <p>
+                        <%= task %>
+                    </p>
+                </div>
+            <% } %>
+            </div>
+        <% } %>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/main.js"></script>
+<%- include("partials/footer.ejs") %>
